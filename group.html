@@ -1,170 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Microsystems Lab</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    
+    <title>Microsystems Lab - Members</title>
 
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Loading third party fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="style.css">
-		
-		<!--[if lt IE 9]>
-		<script src="js/ie-support/html5.js"></script>
-		<script src="js/ie-support/respond.js"></script>
-		<![endif]-->
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!--[if lt IE 9]>
+    <script src="js/ie-support/html5.js"></script>
+    <script src="js/ie-support/respond.js"></script>
+    <![endif]-->
 
-	</head>
+    <style>
+        /* Dropdown menu styles */
+        .menu-item-has-children {
+            position: relative;
+        }
+        .sub-menu {
+            display: none;
+            position: absolute;
+            background: #fff;
+            min-width: 200px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+            padding: 10px 0;
+        }
+        .menu-item-has-children:hover .sub-menu {
+            display: block;
+        }
+        .sub-menu .menu-item {
+            display: block;
+            padding: 8px 15px;
+        }
+        .sub-menu .menu-item a {
+            color: #333;
+            text-decoration: none;
+        }
+        .sub-menu .menu-item:hover {
+            background: #f5f5f5;
+        }
+        
+        /* Section visibility control */
+        .members-section {
+            display: none;
+        }
+        .members-section.active {
+            display: block;
+        }
+        
+        /* Tab navigation */
+        .member-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .member-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #f5f5f5;
+            margin-right: 5px;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+        }
+        .member-tab.active {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+            margin-bottom: -1px;
+        }
+        
+        /* PI section styling */
+        .pi-section {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 40px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        .pi-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #f5f5f5;
+        }
+        .pi-details {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        /* Consistent list styling */
+        .boxed-content ul {
+            padding-left: 1.5em;
+            margin-left: 0;
+        }
+        .boxed-content li {
+            margin-bottom: 0.5em;
+            padding-left: 0.5em;
+            text-indent: -0.5em;
+            list-style-type: none;
+        }
+        .boxed-content li:before {
+            content: "•";
+            padding-right: 0.5em;
+        }
 
+        /* Member row styling */
+        .member-row {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        .member-row:last-child {
+            border-bottom: none;
+        }
+        .team-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
 
-	<body>
-		
-		<div class="site-content">
-			<header class="site-header" data-bg-image="">
-				<div class="container">
-					<div class="header-bar">
-						<a href="index.html" class="branding">
-							<img src="images/launch-logos1.jpg" alt="" width="75" height="58" class="logo">
-							<div class="logo-type">
-							  <h1 class="site-title">Microsystems Lab, CeNSE</h1>
-							  Indian Institute Of Science, Bengaluru<br>
-							</div>
-						</a>
+<body>
+    <div class="site-content">
+        <header class="site-header" data-bg-image="">
+            <div class="container">
+                <div class="header-bar">
+                    <a href="index.html" class="branding">
+                        <img src="images/launch-logos1.jpg" alt="" width="75" height="58" class="logo">
+                        <div class="logo-type">
+                          <h1 class="site-title">Microsystems Lab, CeNSE</h1>
+                          Indian Institute Of Science, Bengaluru<br>
+                        </div>
+                    </a>
 
-						<nav class="main-navigation">
-							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
-							<ul class="menu">
-								<li class="home menu-item"><a href="index.html"><img src="images/home-icon.png" alt="Home"></a></li>
-								<li class="menu-item"><a href="about.html">About</a></li>
-								<li class="menu-item"><a href="updates.html">Updates</a></li>
-								<li class="menu-item current-menu-item"><a href="group.html">Group</a></li>
-								<li class="menu-item"><a href="publications.html">Publications</a></li>
-							</ul>
-						</nav>
+                    <nav class="main-navigation">
+                        <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+                        <ul class="menu">
+                            <li class="home menu-item"><a href="index.html"><img src="images/home-icon.png" alt="Home"></a></li>
+                            <li class="menu-item"><a href="about.html">About</a></li>
+                            <li class="menu-item"><a href="updates.html">Updates</a></li>
+                            <li class="menu-item menu-item-has-children current-menu-item">
+                                <a href="group.html">MEMBERS</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" class="show-pi">Principal Investigator</a></li>
+                                    <li class="menu-item"><a href="#" class="show-current">Current Members</a></li>
+                                    <li class="menu-item"><a href="#" class="show-alumni">Alumni</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="publications.html">Publications</a></li>
+                        </ul>
+                    </nav>
 
-						<div class="mobile-navigation"></div>
-					</div>
-				</div>
-			</header>
+                    <div class="mobile-navigation"></div>
+                </div>
+            </div>
+        </header>
 
-			<div class="page-head" data-bg-image="images/page-head-3.jpg">
-				<div class="container">
-					<h2 class="page-title">Our Group</h2>
-					<small>Our group has research projects spanning its need for various disciplines expertise, and so we have congregated such pool here.</small>
-				</div>
-			</div>
+        <div class="page-head" data-bg-image="images/page-head-3.jpg">
+            <div class="container">
+                <h2 class="page-title">Our Members</h2>
+                <small>Our group has research projects spanning its need for various disciplines expertise, and so we have congregated such pool here.</small>
+            </div>
+        </div>
 
-			<main class="main-content">
-				<div class="fullwidth-block">
-					<div class="container">
-					  <h2 class="section-title">Lab Members</h2>
-						<h3>Ph.D. Students</h3>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/vishnu.jpg" alt="" class="team-image">
-									<h3 class="team-name">Vishnu Kumar</h3>
-									<!--<h3>Research Interests</h3>
-									<li >Energy loss mechanisms in micro/nano scaled resonators</li>
-									<li >Wafer scale packaging for MEMS</li>
-									<li>Human-computer modality enhancements</li>
-									<li>Low cost system development for IC fabrication and characterization</li>
-								-->
-							  </div>
-						</div>			
-								
-						
-							<div class="col-md-6">
-								<div class="boxed-content">
-								<h3>
-									Education:
-								  </h3>
-									<li>Diploma in Mechanical Engineering from New government polytechnic, Patna-13</li>
-									<li>B.Tech in Mechanical Engineering from Sant Longowal Institute of Engineering and Technology, Longowal, Punjab</li>
-								<br>
-								<h3>
-									Research Work:
-							  </h3>
-									<li>Phononic Crystals</li>
-						   </div>
-							</div>
-					
-				</div>
-
-				
-						<div class="row">
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/shreeraj.jpg" alt="" class="team-image">
-									<h3 class="team-name">Shreeraj Joshi</h3>
-									
-								
-							  </div>
-						</div>			
-								
-						
-							<div class="col-md-6">
-								<div class="boxed-content">
-								<h3>
-									Education:
-								  </h3>
-									<li>B.Tech. in Metallurgy and Materials Science at the College of Engineering, Pune (2017)</li>
-									<li>M.Tech. in Nanoscience Engineering from CeNSE, IISc (2020) </li>
-								<br>						
-														
-							 <h3>
-									Research Work:
-							  </h3>
-							 
-							   <li>Thermoelastic dissipation mechanisms in Micro-electromechanical systems</li>
-							  
-														  
-							 
-							  </div>
-							</div>
-						</div>
-			<div class="row">
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/upanya.jpg" alt="" class="team-image">
-									<h3 class="team-name">Upanya Khandelwal</h3>
-									
-								
-							  </div>
-						</div>			
-								
-						
-							<div class="col-md-6">
-								<div class="boxed-content">
-								<h3>
-									Education:
-								  </h3>
-									<li>B.Sc in Physics from University of Delhi (2016)</li>
-									<li>M.Sc in Physics from University of Delhi (2018)</li>
-								
-								<br>	
-								<h3>
-									Experience:
-								</h3>
-								<li>Project assistant at CeNSE in 2018</li>
-							<br>
-							  <h3>
-									Research Work:
-							  </h3>
-								
-								  <li>Quantifying anchor losses in resonators, and to give an analytical model for the same. </li>
-								</div>
-							</div>
-					</div>
-						
-						
-						<div class="row">
+        <main class="main-content">
+            <div class="fullwidth-block">
+                <div class="container">
+                    <!-- Tab Navigation -->
+                    <div class="member-tabs">
+                        <div class="member-tab active" data-tab="pi-section">Principal Investigator</div>
+                        <div class="member-tab" data-tab="current-members">Current Members</div>
+                        <div class="member-tab" data-tab="alumni-members">Alumni</div>
+                    </div>
+                    
+                    <!-- Principal Investigator Section -->
+                    <div class="members-section active" id="pi-section">
+                        <div class="pi-section">
+                            <img src="images/csaurabh.jpg" alt="Prof. Saurabh Chandorkar" class="pi-image">
+                            <h2>Prof. Saurabh Chandorkar</h2>
+                            <h3>Principal Investigator</h3>
+                            
+                            <div class="pi-details">
+                                <h3>Education:</h3>
+                                <ul>
+                                    <li>PhD Mechanical Engineering with minor in Electrical Engineering, 2009, Stanford University, USA</li>
+                                    <li>MS Mechanical Engineering, 2005, Stanford University, USA</li>
+                                    <li>B.Tech. Mechanical Engineering, 2003, IIT Bombay</li>
+                                </ul>
+                                <br>
+                                <h3>Experience:</h3>
+                                <ul>
+                                    <li>Associate Professor, IISc Bangalore, April 2025 - Present</li>
+                                    <li>Assistant Professor, IISc Bangalore, December 2017 - April 2025</li>
+                                    <li>Lecturer, Mechanical Engineering Department at Stanford University, March 2017-December 2017</li>
+                                    <li>Research Consultant, IIT Bombay, July 2016 – March 2017</li>
+                                    <li>Advanced Equipment Engineer, Intel October 2010- July 2016</li>
+                                    <li>Postdoctoral Fellow, Stanford University, April 2009- September 2010</li>
+                                </ul>
+                                <br>
+                                <h3>Research Interests:</h3>
+                                <ul>
+                                    <li>Phononic Crystals</li>
+                                    <li>Analog Circuits for MEMS</li>
+                                    <li>Superconducting MEMS Devices</li>
+                                    <li>Wafer scale packaging for MEMS</li>
+                                    <li>Human-computer modality enhancements</li>
+                                    <li>Energy loss mechanisms in micro/nano scaled resonators</li>
+                                    <li>Low cost system development for IC fabrication and characterization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Current Members Section -->
+                  <div class="members-section" id="current-members">
+                        <h3>Ph.D. Students</h3>
+                      <div class="member-container">
+							
+													<div class="row">
 							<div class="col-md-3">
 								<div class="team">
 									<img src="images/disha.jpg" alt="" class="team-image">
@@ -181,8 +247,7 @@
 									Education:
 								  </h3>
 									<li> BE in Electrical Engineering from Punjab Engineering College, Chandigarh (2017)</li>
-									<ul>
-									  <li> PhD from CeNSE, IISc (2019-2025)</li>
+									
 								  </ul>
 									<br>
 									
@@ -198,20 +263,83 @@
 							 <h3>
 									Research Work:
 							  </h3>
-							 <ul>
+							
 							   <li>Custom circuit design for MEMS</li>
-							   </ul>
-							  </div>
+								</div>
 							</div>
-						</div>
-
-						<div class="row">
+					</div>
+						<div class="member-container">
+							
+													<div class="row">
 							<div class="col-md-3">
 								<div class="team">
-									<img src=images/Garvit.jpeg alt="" class="team-image">
-									<h3 class="team-name">Garvit Gupta</h3>
+									<img src="images/anju.png" alt="" class="team-image">
+									<h3 class="team-name">Anju Sebastian</h3>
 									
 								
+							  </div>
+						</div>			
+								
+						
+							<div class="col-md-6">
+								<div class="boxed-content">
+								<h3>
+									Education:
+								  </h3>
+									<li>B.Tech in Electronics and Communication Engineering, Rajagiri School of Engineering and Technology, Kochi, Kerala (2016).</li>
+
+									<li>M.Tech in VLSI and Microsystems, Indian Institute of Space Science and Technology, Thiruvanthapuram (2019)</li>
+								
+								<br>	
+								<h3>
+									Experience:
+								</h3>
+								<li>Senior Test Engineer at Cypress Semiconductor Technology India Pvt. Ltd, Bangalore.</li>
+							<br>
+									<h3>Accolades:</h3>
+									<li>PMRF awardee</li>
+									<br>
+							  <h3>
+									Research Work:
+							  </h3>
+								
+								  <li>Bio-inspired MEMS-based Cochlear Implant. </li>
+								</div>
+							</div>
+					</div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="team">
+                                        <img src="images/shreeraj-1.jpeg" alt="" class="team-image">
+                                        <h3 class="team-name">Shreeraj Joshi</h3>
+                                    </div>
+                                </div>            
+                                <div class="col-md-6">
+                                    <div class="boxed-content">
+                                        <h3>Education:</h3>
+                                        
+                                            <li>B.Tech. in Metallurgy and Materials Science at the College of Engineering, Pune (2017)</li>
+                                            <li>M.Tech. in Nanoscience Engineering from CeNSE, IISc (2020)</li>
+                                       <br>
+									<h3>Accolades:</h3>
+									<ul>
+									  <li>PMRF awardee</li>
+									  <li>Best poster award at CeNSE symposium </li>
+									</ul>
+									<br>
+                                        <h3>Research Work:</h3>
+                                        <ul>
+                                          <li>Superconducting MEMS systems to study manybody interactions</li>
+                                          <li>Fabrication of inertial sensors that rely on the phenomenon of superconductivity. </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="row">
+                                <div class="col-md-3">
+                                    <div class="team">
+									<img src=images/Garvit.jpeg alt="" class="team-image">
+										<h3 class="team-name">Garvit Gupta</h3>			
 							  </div>
 						</div>			
 								
@@ -228,21 +356,77 @@
 									Research Work:
 							  </h3>
 								
-								  <li>Anchor loss in MEMS resonators, Non linear dynamics, Fabrication and characterization of Episeal MEMS resonators</li>
-									
-							  
-							 
+								  <li>Anchor loss in MEMS resonators, non-linear dynamics, fabrication and characterization of Episeal MEMS resonators</li>
 							  </div>
 							</div>
 						</div>
+									
+							  <div class="row">
+							<div class="col-md-3">
+								<div class="team">
+									<img src="images/Arup.jpg" alt="" class="team-image">
+									<h3 class="team-name">Arup Basak</h3>
+									
+								
+							  </div>
+						</div>			
+								
+						
+							<div class="col-md-6">
+								<div class="boxed-content">
+								<h3>
+									Education:
+								  </h3>
+									<li>B.Sc in Physics from Jadavpur University, Kolkata (2021)</li>
+									<li>M.Sc in Physics from Jadavpur University, Kolkata (2023)</li>
+								
+								<br>	
+								
+														  <h3>
+									Research Work:
+							  </h3>
+								
+								  <li>Fabrication of devices to study metal-insulator transition in VO2 </li>
+								</div>
+							</div>
+					</div>
+													
+							  <div class="row">
+							<div class="col-md-3">
+								<div class="team">
+									<img src="images/Prem.jpeg" alt="" class="team-image">
+									<h3 class="team-name">Prem Prakash Manglam</h3>
+									
+								
+							  </div>
+						</div>			
+								
+						
+							<div class="col-md-6">
+								<div class="boxed-content">
+								<h3>
+									Education:
+								  </h3>
+									<li>B.Tech in Electronics and Communication Engineering from MIT muzaffarpur (2020)</li>
+									<li>M.Tech in Microelectronics, IIT BHU (2024)</li>
+								
+								
+							  <h3>
+									Research Work:
+							  </h3>
+								
+								  <li>Phase noise in Oscillators </li>
+								</div>
+							</div>
+					</div>
+							 
+							
 					<div class="row">
 							<div class="col-md-3">
 								<div class="team">
 									<a href="images/Surojit.jpg"><img src="images/Surojit.jpg" alt="" class="team-image"></a>
 									<h3 class="team-name">Surojit Biswas</h3>
-									
-								
-							  </div>
+</div>
 						</div>			
 								
 						
@@ -287,23 +471,22 @@
 								  </h3>
 									<li>B.Tech in Mechanical Engineering, MMMUT Gorakhpur U.P. (2021)</li>
 									<li>M.Tech in Materials Engineering, NIT Surathkal, Karnataka (2024)</li>
-								
-								<br>	
+									
 								<h3>
 									
 							  <h3>
 									Research Work:
 							  </h3>
 								
-								  <li>Phononic Crystals</li>
+								  <li>Quantum Memory via Phononic Crystals</li>
 								</div>
 							</div>
-					</div>
-						<div class="row">
+					</div> <!-- Add more current members following the same pattern -->
+                          						<div class="row">
 							<div class="col-md-3">
 								<div class="team">
-									<img src="images/swagat.jpg" alt="" class="team-image">
-									<h3 class="team-name">Swagat Sanket</h3>
+									<img src="images/keerthy.jpeg" alt="" class="team-image">
+									<h3 class="team-name">Keerthy Unnikrishnan </h3>
 									
 								
 							  </div>
@@ -315,70 +498,108 @@
 								<h3>
 									Education:
 								  </h3>
-									<li>Integrated BS-MS, Physics, NISER, Bhubaneswar.</li>
-									
-								<br>						
-														
-							 <h3>
-									Research Work:
-							  </h3>
-								
-								  <li>Transport properties physics in MEMS devices </li>
-									<li>Local energy loss mechanisms in MEMS Resonators that limit their efficiency</li>
-							  
-							 
-							  </div>
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/anju.png" alt="" class="team-image">
-									<h3 class="team-name">Anju Sebastian</h3>
-									
-								
-							  </div>
-						</div>			
-								
-						
-							<div class="col-md-6">
-								<div class="boxed-content">
-								<h3>
-									Education:
-								  </h3>
-									<li>B.Tech in Electronics and Communication Engineering, Rajagiri School of Engineering and Technology, Kochi, Kerala (2016).</li>
-
-									<li>M.Tech in VLSI and Microsystems, Indian Institute of Space Science and Technology, Thiruvanthapuram (2019)</li>
-								
+									<li>B.Tech in Biotechnology, Calicut University(2010)</li>
+									<li>M.Tech in Nanotechnology, Sastra University(2013)</li>
+								<li>M.S. in Materials Science, Wayne State University, US (2019)</li>
 								<br>	
 								<h3>
 									Experience:
 								</h3>
-								<li>Senior Test Engineer at Cypress Semiconductor Technology India Pvt. Ltd, Bangalore.</li>
+								<li>Principal CFM Defect Engineer at Global Foundries (2021-Prsent)</li>
 							<br>
 							  <h3>
 									Research Work:
 							  </h3>
 								
-								  <li>Bio-inspired MEMS-based Cochlear Implant. </li>
+								  <li>Virtual metrology in semiconductor manufacturing processing industry</li>
 								</div>
 							</div>
-					</div>
-					</div>
-						<h3>M.Tech Students</h3>
-							<div class="container">
-							<div class="row">
+					</div>  
+                        </div>
+                        
+                        <h3>M.Tech Students</h3>
+                        <div class="member-container">
+                            <div class="row member-row">
+                                <div class="col-md-3">
+                                    <div class="team">
+                                       <img src="images/Rishant.jpeg" alt="" class="team-image">
+                                        <h3 class="team-name">Rishant Kumar</h3>
+                                    </div>
+                                </div>            
+                                <div class="col-md-6">
+                                    <div class="boxed-content">
+                                        <h3>Education:</h3>
+                                        
+                                            <li>B.Tech Metallurgical Engineering and Materials Science with Minor in Mechanical Engineering, IIT Bombay (2021)</li>
+                                        <br>
+                                        <h3>Research Work:</h3>
+                                        
+                                            <li>Activity of biological neural network using piezoelectric MEMS cantilever</li>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3>Project Staff</h3>
+                        <div class="member-container">
+                            <div class="row member-row">
+                                <div class="col-md-3">
+                                    <div class="team">
+                                        <img src="images/Naveen.jpeg" alt="Naveen D Souza N" class="team-image">
+                                        <h3 class="team-name">Naveen D Souza N</h3>
+                                    </div>
+                                </div>            
+                                <div class="col-md-6">
+                                    <div class="boxed-content">
+                                        <h3>Education:</h3>
+                                        
+                                            <li>B.Sc Mangalore University 2019</li>
+                                            <li>M.Sc Mangalore University 2022</li>
+                                        
+                                        <h3>Experience:</h3>
+                                        
+                                            <li>Working at NNFC, CeNSE (since 2023)</li>
+                                        
+                                        <h3>Research Work:</h3>
+                                        
+                                            <li>Capacitive Micromachined Ultrasonic Transducers (CMUTs)</li>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            
+                            <!-- Add more current members following the same pattern -->
+                            <h3>&nbsp;</h3>
+                    <div class="member-container"> </div>
+<div class="member-container">
+            <div class="row member-row">
+                                <div class="col-md-3">
+                                    <div class="team"> </div>
+                              </div>            
+                              <div class="col-md-6">
+                                <div>
+
+                                </div>
+              </div>
+                          </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Alumni Section -->
+                    <div class="members-section" id="alumni-members">
+                        <h3>PhD Scholars</h3>
+						 <div class="member-container">
+							
+													<div class="row">
 							<div class="col-md-3">
 								<div class="team">
-									<img src="images/ravinder.jpg" alt="" class="team-image">
-									<h3 class="team-name">Ravinder Kumar Jassal</h3>
-									<!--<h3>Research Interests</h3>
-									<li >Energy loss mechanisms in micro/nano scaled resonators</li>
-									<li >Wafer scale packaging for MEMS</li>
-									<li>Human-computer modality enhancements</li>
-									<li>Low cost system development for IC fabrication and characterization</li>
-								-->
+									<img src="images/sam.jpg" alt="" class="team-image">
+									<h3 class="team-name">Samridh Sharma</h3>
+									
+								
 							  </div>
 						</div>			
 								
@@ -388,31 +609,109 @@
 								<h3>
 									Education:
 								  </h3>
-									<li>B.Tech in Electrical Engineering from Punjab Engineering College, Chandigarh(2015-2019)</li>
+									<li>B.Tech in Mechanical engineering from Ajay Kumar Garg Engineering College (2017)</li>
+                                            <li>PhD and M.Tech(Res.) from CeNSE, IISc (2024)</li>
 									
-								<br>
-								<h3>
+								  </ul>
+									
+							<h3>Current Role:</h3>
+									<li>Sr. Process Integration Engineer, Micron Technologies, Taiwan</li>
+									<br>		
+									
+							 <h3>
 									Research Work:
 							  </h3>
-									<li>Design of Low Phase Noise MEMS Oscillators</li>
-						   </div>
+							
+							   <li>Modelling viscous dissipation in Microchannel Resonator</li>
+                                            <li>Fabrication of a flow-rate MEMS sensor</li>
+																  
+							  
+							 
+							  </div>
 							</div>
-					
-				</div>	
+							</div>
+                        
+                            <div class="row">
+                                <div class="col-md-3">
+								<div class="team">
+									<img src="images/vishnu.jpg" alt="" class="team-image">
+									<h3 class="team-name">Vishnu Kumar</h3>
+									
 								
-								<div class="row">
+							  </div>
+						</div>			
+								
+						
+							<div class="col-md-6">
+								<div class="boxed-content">
+								<h3>
+									Education:
+								  </h3>
+									<li>
+										Diploma in Mechanical Engineering from New government polytechnic, Patna-13</li>
+									<li>
+										B.Tech in MEchanical Engineering from Sant Longowal Institute of Engineering and Technology, Longowal, Punjab</li>
+									<li> PhD from CeNSE, IISc (2024)</li>
+									<br>
+									
+								<h3>
+									Current Role:
+								</h3>
+								<li> Reseach Fellow/Postdoc, Niels Bohr Institute, University of Copenhagen</li>
+									
+							<br>		
+									
+							 <h3>
+									Research Work:
+							  </h3>
+								
+								  <li>Phononic Crystals</li>
+								  
+							  
+							 
+							  </div>
+							</div>
+							</div>
+                        
+                            <div class="row member-row">
+                                <div class="col-md-3">
+                                    <div class="team">
+                                        <img src="images/upanya1.jpg" alt="Samridh Sharma" class="team-image">
+                                        <h3 class="team-name">Upanya Khandelwal</h3>
+                                    </div>
+                                </div>            
+                                <div class="col-md-6">
+                                    <div class="boxed-content">
+                                        <h3>Education:</h3>
+                                        
+                                            <li>B.Sc in Physics from University of Delhi (2016)</li>
+									<li>M.Sc in Physics from University of Delhi (2018)</li>
+                                        </ul>
+                                        <h3>Current Role:</h3>
+                                        
+                                            <li>Analog Design, Staff Engineer, Synopsys, Bangalore</li>
+                                        
+                                        <h3>Research Work:</h3>
+                                        
+                                            <li>Coupled electro-opto-mechanical oscillations in Neuristors.</li>
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Add more alumni following the same pattern -->
+                            
+                        </div>
+                        
+                        <h3>MTech Students</h3>
+                        <div class="member-container">
+							<div class="row">
 							<div class="col-md-3">
 								<div class="team">
 									<img src="images/arun.jpg" alt="" class="team-image">
 									<h3 class="team-name">Arun Singh Baghel</h3>
 									
-									<!--<h3>Research Interests</h3>
-									<li >Energy loss mechanisms in micro/nano scaled resonators</li>
-									<li >Wafer scale packaging for MEMS</li>
-									<li>Human-computer modality enhancements</li>
-									<li>Low cost system development for IC fabrication and characterization</li>
-								-->
-							  </div>
+									</div>
 						</div>			
 								
 						
@@ -421,14 +720,17 @@
 								<h3>
 									Education:
 								  </h3>
-									<li>Btech in Mechanical Engineering. IIT BBS (2014-18)</li>
+									<li>B.Tech in Mechanical Engineering. IIT BBS (2018)</li>
+									<li>M.Tech from CeNSE, IISc (2021)</li>
 									<br>
 									
 								<h3>
-									Experience:
+									Current Role:
 								</h3>
-									<li>Officer at HPCL, LPG Bottling plant (2018-19)</li>
-									<li>Intern at Lam Research (2020-21)</li>
+									<li>IC Design
+Engineer,
+Analog Devices</li>
+									
 								<br>
 								<h3>
 									Research Work:
@@ -438,19 +740,13 @@
 							</div>
 					
 				</div>	
-						</div>
-						
-						<h3>Project Assistants</h3>
-						<div class="container">
-						
 							<div class="row">
 							<div class="col-md-3">
 								<div class="team">
-									<img src="images/vaibhav.jpg" alt="" class="team-image">
-									<h3 class="team-name">Vaibhav Sharma</h3>
+									<img src="images/Pavitra.jpeg" alt="" class="team-image">
+									<h3 class="team-name">Pavitra Jain</h3>
 									
-								
-							  </div>
+									</div>
 						</div>			
 								
 						
@@ -459,30 +755,199 @@
 								<h3>
 									Education:
 								  </h3>
-									<li>Bachelor’s degree in Mechanical engineering from Birla Institute of Technology &amp; Science, Hyderabad Campus</li>
+									<li>Btech in Mechanical Engineering. NIT Kurukshetra (2021)</li>
+									<li>M.Tech from CeNSE, IISc (2024)</li>
 									<br>
 									
 								<h3>
-									Experience:
+									Current Role:
 								</h3>
-								<li>UG internship at CeNSE (2017)</li>
-									<li>Project Assistant (since 2018)</li>
-							<br>		
+									<li>Doctoral Student at Purdue University, USA</li>
 									
-							 <h3>
+								<br>
+								<h3>
 									Research Work:
 							  </h3>
-								
-								  <li>Modelling and optimization of MEMS devices</li>
-									
-							  
-							 
-							  </div>
+									<li>Designing high bandwidth accelerometer</li>
+									<li>Study of clamping loss and nonlinearity in MEMS resonators</li>
+									<li>Applying machine learning to optimise topology of piezoelectric MEMS resonators</li>
+						   </div>
 							</div>
-						</div>
+					
+				</div>
+							<div class="row">
+							<div class="col-md-3">
+								<div class="team">
+									<img src="images/Anik.jpeg" alt="" class="team-image">
+									<h3 class="team-name">Anik Mandal</h3>
+									
+									</div>
+						</div>			
+								
 						
+							<div class="col-md-6">
+								<div class="boxed-content">
+								<h3>
+									Education:
+								  </h3>
+									<li>B.E. in Mechanical Engineering,
+Jadavpur University (2021)</li>
+									<li>M.Tech from CeNSE, IISc (2024)</li>
+									<br>
+									
+								<h3>
+									Current Role:
+								</h3>
+									<li>EUV Process
+Engineer,
+Micron Technology,
+Taiwan</li>
+									
+								<br>
+								<h3>
+									Research Work:
+							  </h3>
+									<li>Acousting Beam Steering using Phased Array</li>
+						   </div>
+							</div>
+					
+				</div>
 						<div class="row">
 							<div class="col-md-3">
+								<div class="team">
+									<img src="images/Devaharsha.jpeg" alt="" class="team-image">
+									<h3 class="team-name">Katakam Devaharsha Siva Sai</h3>
+									
+									</div>
+						</div>			
+								
+						
+							<div class="col-md-6">
+								<div class="boxed-content">
+								<h3>
+									Education:
+								  </h3>
+									<li>B.Sc in Physics, Sri Sathya Sai Institute of Higher Learning (2020)</li>
+									<li>M.Sc in Physics, Sri Sathya Sai Institute of Higher Learning (2022)</li>
+									<li>M.Tech from CeNSE, IISc (2024)</li>
+									<br>
+									
+								<h3>
+									Current Role:
+								</h3>
+									<li>Process Integration and
+Yield Engineering,
+Global Foundaries</li>
+									
+								<br>
+								<h3>
+									Research Work:
+							  </h3>
+									<li>Root cause analysis methodology in high-volume semiconductor manufacturing using statistical approach</li>
+						   </div>
+							</div>
+					
+				</div>
+													<div class="row">
+							<div class="col-md-3">
+								<div class="team">
+									<img src="images/Abhinay.jpeg" alt="" class="team-image">
+									<h3 class="team-name">Kappa Venkata Abhinay Ganesh Raju</h3>
+									
+									</div>
+						</div>			
+								
+						
+							<div class="col-md-6">
+								<div class="boxed-content">
+								<h3>
+									Education:
+								  </h3>
+									<li>B.Tech in Mechanical Engineering, 
+K.S.R.M. College of Engineering, (2018)</li>
+									<li>M.Tech from CeNSE, IISc (2024)</li>
+									<br>
+									
+								<h3>
+									Current Role:
+								</h3>
+									<li>Sr. Mechanical Engineer,LAM Research</li>
+									
+								<br>
+								<h3>
+									Research Work:
+							  </h3>
+									<li>Tracking electro-mechanical response from correlated VO2 Microwires</li>
+						   </div>
+							</div>
+					
+				</div>
+							
+                            <div class="row member-row">
+                                <div class="col-md-3">
+                                    <div class="team">
+                                        <img src="images/ravinder.jpg" alt="Ravinder Kumar Jassal" class="team-image">
+                                        <h3 class="team-name">Ravinder Kumar Jassal</h3>
+                                    </div>
+                                </div>            
+                                <div class="col-md-6">
+                                    <div class="boxed-content">
+                                        <h3>Education:</h3>
+                                        
+                                            <li>B.Tech in Electrical Engineering from Punjab Engineering College, Chandigarh (2019)</li>
+                                        
+										<li>M.Tech(Res.) from CeNSE, IISc (2021)</li>
+										<br>
+									
+								<h3>
+									Current Role:
+								</h3>
+								<li>Hardware Engineer 2,
+Juniper Networks</li>
+							<br>
+                                        <h3>Research Work:</h3>
+                                       
+                                            <li>Design of low phase noise MEMS Oscillators</li>
+                                        
+										
+                                    </div>
+                                </div>
+                            </div>
+							</div>
+					                        
+                        <h3>Project Staff</h3>
+                        <div class="member-container">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="team">
+                                        <img src="images/vaibhav1.jpg" alt="Vaibhav Sharma" class="team-image">
+                                        <h3 class="team-name">Vaibhav Sharma</h3>
+                                    </div>
+                                </div>            
+                                <div class="col-md-6">
+                                    <div class="boxed-content">
+                                        <h3>Education:</h3>
+                                        
+                                            <li>Bachelor's degree in Mechanical engineering from Birla Institute of Technology & Science, Hyderabad Campus</li>
+                                        
+										<br>
+									
+								<h3>
+									Current Role:
+								</h3>
+								
+								  <li>Doctoral Student at University of California, Los Angeles </li>
+								  </ul>
+								<br>
+                                        <h3>Research Work:</h3>
+                                       
+                                            <li>Modelling and optimization of Microsystems</li>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+							<div class="row">
+                                <div class="col-md-3">
 								<div class="team">
 									<img src="images/bhargavi.jpg" alt="" class="team-image">
 									<h3 class="team-name">Bhargavi B A</h3>
@@ -502,257 +967,136 @@
 									<br>
 									
 								<h3>
-									Experience:
+									Current Role:
 								</h3>
-								<li>Working at NNfC, CeNSE (since 2018)</li>
+								<li>Process Engineer at AGNIT Semiconductors Pvt. Ltd.</li>
 							<br>		
 									
 							 <h3>
 									Research Work:
 							  </h3>
 								
-								  <li>Epi si technology for MEMS packaging.</li>
+								  <li>Epi si technology for MEMS Packaging.</li>
 							
 							 
 							  </div>
 							</div>
 						</div>
-						
-							<div class="row">
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/Naveen.jpeg" alt="" class="team-image">
-									<h3 class="team-name">Naveen D Souza N</h3>
-									
-								
-							  </div>
-						</div>			
-								
-						
-							<div class="col-md-6">
-								<div class="boxed-content">
-								<h3>
-									Education:
-								  </h3>
-								  <li> B.Sc Mangalore University 2019</li>
-									<li>M.Sc Mangalore University 2022</li>
-									<br>
-									
-								<h3>
-									Experience:
-								</h3>
-								<ul>
-								  <li>Working at NNFC, CeNSE (since 2023)</li>
-								  </ul>
-								<br>		
-									
-							 <h3>
-									Research Work:
-							  </h3>
-								
-								  <li>Capacitive Micromachined Ultrasonic Transducers (CMUTs) </li>
-									
-							  
-							 
-							  </div>
-							</div>
-						</div>
-						
-						</div>
-						<h3>Alumni</h3>
-						<p><strong>PhD Scholars </strong></p>
-						<div class="container">
-							<div class="row">
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/sam.jpg" alt="" class="team-image">
-									<h3 class="team-name">Samridh Sharma</h3>
-									
-								
-							  </div>
-						</div>			
-								
-						
-							<div class="col-md-6">
-								<div class="boxed-content">
-								<h3>
-									Education:
-								  </h3>
-									<li> B.Tech in Mechanical engineering from Ajay Kumar Garg Engineering College (2017)</li>
-									<li> PhD and M.Tech(Res.) from CeNSE, IISc (2024)</li>
-									<br>
+                        </div>
+				<div class="member-container">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="team">
+                                        <img src="images/Harish.jpeg" alt="" class="team-image">
+                                        <h3 class="team-name">Harish Kumar Maurya</h3>
+                                    </div>
+                                </div>            
+                                <div class="col-md-6">
+                                    <div class="boxed-content">
+                                        <h3>Education:</h3>
+                                        
+                                            <li>Integrated BS-MS, Physics, IISc, Bangalore (2024)</li>
+                                        
+										<br>
 									
 								<h3>
 									Current Role:
 								</h3>
-								<li> Sr. Process Integration Engineer, Micron Technologies, Taiwan</li>
-									
-							<br>		
-									
-							 <h3>
-									Research Work:
-							  </h3>
-								
-								  <li>Modelling Viscous Dissipation in Microchannel Resonator</li>
-								  <li>Fabrication of a Flow-rate MEMS sensor</li>	
-							  
-							 
-							  </div>
-							</div>
-							</div>
-							
-							<div class="container">
-							<div class="row">
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/vishnu.jpg" alt="" class="team-image">
-									<h3 class="team-name">Vishnu Kumar</h3>
-									
-								
-							  </div>
-						</div>			
-								
-						
-							<div class="col-md-6">
-								<div class="boxed-content">
-								<h3>
-									Education:
-								  </h3>
-									<li> B.Tech in Mechanical engineering from Ajay Kumar Garg Engineering College (2017)</li>
-									<li> PhD and M.Tech(Res.) from CeNSE, IISc (2024)</li>
-									<br>
-									
-								<h3>
-									Current Role:
-								</h3>
-								<li> Sr. Process Integration Engineer, Micron Technologies, Taiwan</li>
-									
-							<br>		
-									
-							 <h3>
-									Research Work:
-							  </h3>
-								
-								  <li>Modelling Viscous Dissipation in Microchannel Resonator</li>
-								  <li>Fabrication of a Flow-rate MEMS sensor</li>	
-							  
-							 
-							  </div>
-							</div>
-							</div>
-							
-						</div>
-						<p><strong>MTech Students</strong></p>
-						<div class="container">
-							<div class="row">
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/ravinder.jpg" alt="" class="team-image">
-									<h3 class="team-name">Ravinder Kumar Jassal</h3>
-								</div>
-						</div>			
-								
-						
-							<div class="col-md-6">
-							  <div class="boxed-content">
-								<h3>
-									Education:
-							    </h3>
-								  <li> B.Tech in Electrical Engineering from Punjab Engineering College, Chandigarh(2015-2019)                                  
-								  
-								    
-								    <h3>&nbsp;
-							        </h3>
-								    <h3>Current Role: </h3>
-							      <li></li>
-									
-							<br>		
-									
-							 <h3>
-									Research Work:
-							  </h3>
-								
-							    <li>Design of Low Phase Noise MEMS Oscillators</li>	
-							  
-							 
-							  </div>
-							</div>
-						  </div>
-							
-					  </div>
-				<!--<div class="fullwidth-block" data-bg-color="#edf2f4">
-					<div class="container">
-						<div class="subscribe-form">
-							<h2>Join our newsletter</h2>
-							<form action="#">
-								<input type="text" placeholder="Enter your email">
-								<input type="submit" value="Subscribe">
-							</form>
-						</div>-->
-				  </div>
-				</div>
+								<li>Ph.D. Scholar at University of Groningen</li>
+							<br>
+                                        <h3>Research Work:</h3>
+                                       
+                                            <li>Neuromorphic computing aspects in Vanadium Dioxide</li>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-			</main> <!-- .main-content -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="widget">
+                            <h3 class="widget-title">Address</h3>
+                            <strong>Microsystems Lab, CeNSE</strong>
+                            <address>IISc, Bengaluru, Karnataka 560012</address>
+                            <a href="http://www.cense.iisc.ac.in/" target="_blank">http://www.cense.iisc.ac.in/</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
-			<footer class="site-footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="widget">
-								<h3 class="widget-title">Address</h3>
-								<strong>Microsystems Lab, CeNSE</strong>
-								<address>IISc, Bengaluru, Karnataka 560012</address>
-								<!--<a href="tel:+1 800 931 812">+1 800 931 812</a> <br>-->
-								<a href="http://www.cense.iisc.ac.in/"  target="_blank">http://www.cense.iisc.ac.in/</a>
-							</div>
-						</div>
-						<!--<div class="col-md-3">
-							<div class="widget">
-								<h3 class="widget-title">Press room</h3>
-								<ul class="arrow-list">
-									<li><a href="#">Accusantium doloremque</a></li> 
-									<li><a href="#">Laudantium totam aperiam</a></li>
-									<li><a href="#">Eaque ipsa quae illo inventore</a></li> 
-									<li><a href="#">Veritatis et quasi architecto</a></li>
-									<li><a href="#">Vitae dicta sunt explicabo</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="widget">
-								<h3 class="widget-title">Research summary</h3>
-								<ul class="arrow-list">
-									<li><a href="#">Accusantium doloremque</a></li> 
-									<li><a href="#">Laudantium totam aperiam</a></li>
-									<li><a href="#">Eaque ipsa quae illo inventore</a></li> 
-									<li><a href="#">Veritatis et quasi architecto</a></li>
-									<li><a href="#">Vitae dicta sunt explicabo</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="widget">
-								<h3 class="widget-title">Social media</h3>
-								<p>Deserunt mollitia animi id est laborum dolorum fuga harum quidem rerum facilis.</p>
-								<div class="social-links">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-pinterest"></i></a>
-								</div>
-							</div>
-						</div>-->
-					</div> <!-- .row -->
-
-					<!--<p class="colophon">copyright 2014 Company name. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by VandelayDesign.com" target="_blank">VandelayDesign.com</a>. All rights reserved</p>-->
-				</div> <!-- .container -->
-			</footer>
-		</div>
-
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		
-	</body>
-
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/app.js"></script>
+    
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default view to PI Section
+            document.getElementById('pi-section').classList.add('active');
+            document.querySelector('.member-tab[data-tab="pi-section"]').classList.add('active');
+            
+            // Tab click handlers
+            document.querySelectorAll('.member-tab').forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs and sections
+                    document.querySelectorAll('.member-tab').forEach(function(t) {
+                        t.classList.remove('active');
+                    });
+                    document.querySelectorAll('.members-section').forEach(function(s) {
+                        s.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked tab and corresponding section
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Handle dropdown menu clicks
+            document.querySelector('.show-pi').addEventListener('click', function(e) {
+                e.preventDefault();
+                switchToSection('pi-section');
+            });
+            
+            document.querySelector('.show-current').addEventListener('click', function(e) {
+                e.preventDefault();
+                switchToSection('current-members');
+            });
+            
+            document.querySelector('.show-alumni').addEventListener('click', function(e) {
+                e.preventDefault();
+                switchToSection('alumni-members');
+            });
+            
+            // Mobile menu toggle functionality
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.querySelector('.menu').classList.toggle('active');
+            });
+            
+            // Function to switch between sections
+            function switchToSection(sectionId) {
+                // Remove active class from all tabs and sections
+                document.querySelectorAll('.member-tab').forEach(function(t) {
+                    t.classList.remove('active');
+                });
+                document.querySelectorAll('.members-section').forEach(function(s) {
+                    s.classList.remove('active');
+                });
+                
+                // Activate the selected section
+                document.querySelector(`.member-tab[data-tab="${sectionId}"]`).classList.add('active');
+                document.getElementById(sectionId).classList.add('active');
+            }
+        });
+    </script>
+</body>
 </html>
