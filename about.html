@@ -3,36 +3,115 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 		
 		<title>Microsystems Lab</title>
 
 		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
 		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 		<!-- Loading main css file -->
 		<link rel="stylesheet" href="style.css">
 		
+		<style>
+			/* Additional styles only for Research Highlights and Recent Achievements */
+			.research-section {
+				margin: 40px 0;
+			}
+			
+			.section-header {
+				text-align: center;
+				margin-bottom: 30px;
+				color: #2c3e50;
+				font-size: 28px;
+				font-weight: 600;
+				position: relative;
+				padding-bottom: 10px;
+			}
+			
+			.section-header:after {
+				content: '';
+				display: block;
+				width: 80px;
+				height: 3px;
+				background: #e74c3c;
+				margin: 15px auto 0;
+			}
+			
+			.highlight-card {
+				background: white;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 25px;
+				box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+				border-left: 4px solid #3498db;
+			}
+			
+			.highlight-card h3 {
+				color: #3498db;
+				margin-top: 0;
+				margin-bottom: 15px;
+				font-size: 20px;
+			}
+			
+			.highlight-card ul {
+				padding-left: 20px;
+			}
+			
+			.highlight-card li {
+				margin-bottom: 10px;
+				position: relative;
+				list-style-type: none;
+				padding-left: 20px;
+			}
+			
+			.highlight-card li:before {
+				content: '•';
+				color: #e74c3c;
+				font-weight: bold;
+				position: absolute;
+				left: 0;
+			}
+			
+			.achievement-item {
+				background: white;
+				border-radius: 8px;
+				padding: 20px;
+				margin-bottom: 15px;
+				box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+				display: flex;
+				align-items: flex-start;
+			}
+			
+			.achievement-icon {
+				color: #3498db;
+				font-size: 20px;
+				margin-right: 15px;
+				margin-top: 3px;
+			}
+			
+			.achievement-text {
+				flex: 1;
+			}
+		</style>
+		
 		<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
-
 	</head>
 
-
 	<body>
-		
 		<div class="site-content">
 			<header class="site-header" data-bg-image="">
 				<div class="container">
 					<div class="header-bar">
 						<a href="index.html" class="branding">
-							<img src="images/launch-logos1.jpg" alt="" width="75" height="58" class="logo">
+							<img src="images/launch-logos1.jpg" alt="Microsystems Lab Logo" width="75" height="58" class="logo">
 							<div class="logo-type">
-							  <h1 class="site-title">Microsystems Lab, CeNSE</h1>
-							  Indian Institute Of Science, Bengaluru<br>
+								<h1 class="site-title">Microsystems Lab, CeNSE</h1>
+								Indian Institute Of Science, Bengaluru<br>
 							</div>
 						</a>
 
@@ -42,7 +121,7 @@
 								<li class="home menu-item"><a href="index.html"><img src="images/home-icon.png" alt="Home"></a></li>
 								<li class="menu-item current-menu-item"><a href="about.html">About</a></li>
 								<li class="menu-item"><a href="updates.html">Updates</a></li>
-								<li class="menu-item"><a href="group.html">Group</a></li>
+								<li class="menu-item"><a href="group.html">Members</a></li>
 								<li class="menu-item"><a href="publications.html">Publications</a></li>
 							</ul>
 						</nav>
@@ -55,7 +134,7 @@
 			<div class="page-head" data-bg-image="images/page-head-1.jpg">
 				<div class="container">
 					<h2 class="page-title">Microsystems Lab</h2>
-					<small>Studying various physical phenomena through MEMS resonator configuration and exploring the possibility of use of MEMS/NEMS for various engineering applications. </small>
+					<small>Studying various physical phenomena through MEMS resonator configuration and exploring the possibility of use of MEMS/NEMS for various engineering applications.</small>
 				</div>
 			</div>
 
@@ -63,200 +142,59 @@
 				<div class="fullwidth-block">
 					<div class="container">
 						<div class="row">
-							<!--<div class="col-md-4">
-								<h2 class="section-title">Why choose us?</h2>
-								<ol class="circle">
-									<li>
-										<h3>Dignissimos ducimus blanditiis</h3>
-										<p>Molestias excepturi sint occaecati cupiditate provident similique sunt culpa. omnis iste natus voluptatem.</p>
-									</li>
-									<li>
-										<h3>Accusantium doloremque totam</h3>
-										<p>Molestias excepturi sint occaecati cupiditate provident similique sunt culpa. omnis iste natus voluptatem.</p>
-									</li>
-									<li>
-										<h3>Cusamus dignissimos ducimus</h3>
-										<p>Molestias excepturi sint occaecati cupiditate provident similique sunt culpa. omnis iste natus voluptatem.</p>
-									</li>
-								</ol>
-							</div>
-							<div class="col-md-4">
-								<h2 class="section-title">Usefull links</h2>
-								<p>Nemo mollitia iste quis sed iure tempora dolore incidunt praesentium aspernatur! Praesentium impedit aperiam, commodi magnam accusamus nobis. Quia, velit sunt asperiores?</p>
-								<ul class="arrow-list has-border">
-									<li>Praesentium voluptatum deleniti atque dolores </li>
-									<li>Corrupti quos et quas molestias excepturi</li>
-									<li>Occaecati cupiditate non provident similique</li>
-									<li>Nam libero tempore, cum soluta nobis eligendi</li>
-									<li>Iditate non provident, similique sunt in culpa</li>
-									<li>Officia deserunt mollitia animi distinctio laborum</li>
-									<li>Dolorum fuga harum quidem rerum facilis</li>
-								</ul>
-							</div>
-							<div class="col-md-4">
-								<h2 class="section-title">Testimonials</h2>
-								<ul class="testimonial-list">
-									<li>
-										<blockquote>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis</p>
-											<cite>Anthony Rubbens</cite>
-										</blockquote>
-									</li>
-									<li>
-										<blockquote>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis</p>
-											<cite>Anthony Rubbens</cite>
-										</blockquote>
-									</li>
-									<li>
-										<blockquote>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis</p>
-											<cite>Anthony Rubbens</cite>
-										</blockquote>
-									</li>
-								</ul>
-							</div>
+							<!-- Content can be added here if needed -->
 						</div> <!-- .row -->
 					</div> <!-- .container -->		
 				</div> <!-- .fullwidth-block -->
 
 				<div class="fullwidth-block" data-bg-color="#edf2f4">
-					<div class="container">
-						<h2 class="section-title">Lab Supervisor</h2>
-						<div class="row">
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/csaurabh.jpg" alt="" class="team-image">
-									<h3 class="team-name">Asst. Prof. Saurabh Chandorkar</h3>
-									
-									<h3>Research Interests</h3>
-									<li >Energy loss mechanisms in micro/nano scaled resonators</li>
-									<li >Wafer scale packaging for MEMS</li>
-									<li>Human-computer modality enhancements</li>
-									<li>Low cost system development for IC fabrication and characterization</li>
-								
-								</div>
-								
-							</div>
-							<div class="col-md-6">
-								<div class="boxed-content">
-								<h3>
-									Education:
-									</h3>
-									<li>PhD Mechanical Engineering with minor in Electrical Engineering, 2009, Stanford    	University, USA</li>
-									<li>MS Mechanical Engineering, 2005, Stanford University, USA</li>
-									<li>B.Tech. Mechanical Engineering, 2003, IIT Bombay</li>
-								
-								
-								</div>
-							<div class="boxed-content">
-								<h3>
-									Experience:
-									</h3>
-									<li>Assistant Professor, IISC Bangalore, December 2017 - Present</li>
-									<li>Lecturer, Mechanical Engineering Department at Stanford University, March 2017-December 2017
-</li>
-									<li>Research Consultant, IIT Bombay,  July 2016 – March 2017</li>
-								<li>Advanced Equipment Engineer, Intel October 2010- July 2016</li>
-								<li>Postdoctoral Fellow, Stanford University, April 2009- September 2010</li>
-								</div>
-							</div>
-							<!--<div class="col-md-3">
-								<div class="team">
-									<img src="images/person-2.jpg" alt="" class="team-image">
-									<h3 class="team-name">Jannet Smith</h3>
-									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
-									<div class="social-links">
-										<a href=""><i class="fa fa-facebook"></i></a>
-										<a href=""><i class="fa fa-twitter"></i></a>
-										<a href=""><i class="fa fa-google-plus"></i></a>
-										<a href=""><i class="fa fa-pinterest"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/person-3.jpg" alt="" class="team-image">
-									<h3 class="team-name">Paul Newman</h3>
-									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
-									<div class="social-links">
-										<a href=""><i class="fa fa-facebook"></i></a>
-										<a href=""><i class="fa fa-twitter"></i></a>
-										<a href=""><i class="fa fa-google-plus"></i></a>
-										<a href=""><i class="fa fa-pinterest"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/person-4.jpg" alt="" class="team-image">
-									<h3 class="team-name">Sarah Dowson</h3>
-									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
-									<div class="social-links">
-										<a href=""><i class="fa fa-facebook"></i></a>
-										<a href=""><i class="fa fa-twitter"></i></a>
-										<a href=""><i class="fa fa-google-plus"></i></a>
-										<a href=""><i class="fa fa-pinterest"></i></a>
-									</div>
-								</div>
-							</div>-->
-						</div> <!-- .row -->
+					<div class="container research-section">
+						<h2 class="section-header">Research Highlights</h2>
+						<div class="highlight-card">
+	<h3>Our Research Focus Areas</h3>
+							
+						  <li>Theoretical modeling and experimental study of physics such as<ul>
+							<li>Energy loss mechanisms</li>
+								  <li>Parametric excitation</li>
+								  <li>Nonlinearities and phase noise vis-a-vis different material systems and applied external fields such as fluid flow, temperature gradients, magnetic field etc. via Micro and Nano Electromechanical Systems (MEMS/NEMS)</li></ul>
+						
+								 <li>MEMS/NEMS wafer-scale packaging</li>
+								<li>Sensor systems using arrays of resonators</li>
+								<li>Phononic Crystals</li>
+							
+						</div>
 					</div> <!-- .container -->
 				</div>
 
-				<!--<div class="fullwidth-block">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="checked-box">
-									<h3>Numquam eius modi tempora incidunt ut labore</h3>
-									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
+				<div class="fullwidth-block">
+					<div class="container research-section">
+						<h2 class="section-header">Technologies Developed</h2>
+						<div class="highlight-card">
+							<ul>
+								<div class="achievement-item">
+									<div class="achievement-icon"><i class="fa fa-check-circle"></i></div>
+									<div class="achievement-text">Fabricated, characterized and modeled frequency change and energy losses in several types of resonators such as suspended microchannel resonators (SMRs), piezoelectric-SOI based cantilevers and membranes, double ended tuning forks and neuristors.</div>
 								</div>
-
-								<div class="checked-box">
-									<h3>Numquam eius modi tempora incidunt ut labore</h3>
-									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
+								<div class="achievement-item">
+									<div class="achievement-icon"><i class="fa fa-check-circle"></i></div>
+									<div class="achievement-text">Built transimpedence and voltage amplifer circuits for low to mid RF applications</div>
 								</div>
-
-								<div class="checked-box">
-									<h3>Numquam eius modi tempora incidunt ut labore</h3>
-									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
+								<div class="achievement-item">
+									<div class="achievement-icon"><i class="fa fa-check-circle"></i></div>
+									<div class="achievement-text">Used an extension of GA algorithms for system identifcation and shape optimization for practical MEMS applications</div>
 								</div>
-							</div>
-
-							<div class="col-md-6">
-								<div class="checked-box">
-									<h3>Numquam eius modi tempora incidunt ut labore</h3>
-									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
+								<div class="achievement-item">
+									<div class="achievement-icon"><i class="fa fa-check-circle"></i></div>
+									<div class="achievement-text">Developed the technology, fabricated and measured devices with various material systems namely: AlN films for piezoelectric actuation and sensing, PZT on SOIs, Aluminum, Silicon, NdNiO3 and VO2.</div>
 								</div>
-
-								<div class="checked-box">
-									<h3>Numquam eius modi tempora incidunt ut labore</h3>
-									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
+								<div class="achievement-item">
+									<div class="achievement-icon"><i class="fa fa-check-circle"></i></div>
+									<div class="achievement-text">Optimized epi-seal packaging process</div>
 								</div>
-
-								<div class="checked-box">
-									<h3>Numquam eius modi tempora incidunt ut labore</h3>
-									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
-								</div>
-							</div>
+							</ul>
 						</div>
-					</div>
-				</div>
-			
-
-				<div class="fullwidth-block" data-bg-color="#edf2f4">
-					<div class="container">
-						<div class="subscribe-form">
-							<h2>Join our newsletter</h2>
-							<form action="#">
-								<input type="text" placeholder="Enter your email">
-								<input type="submit" value="Subscribe">
-							</form>
-						</div>
-					</div>
-				</div>-->
-				</div>
+					</div> <!-- .container -->
+	</div>
 			</main> <!-- .main-content -->
 
 			<footer class="site-footer">
@@ -267,49 +205,10 @@
 								<h3 class="widget-title">Address</h3>
 								<strong>Microsystems Lab, CeNSE</strong>
 								<address>IISc, Bengaluru, Karnataka 560012</address>
-								<!--<a href="tel:+1 800 931 812">+1 800 931 812</a> <br>-->
-								<a href="http://www.cense.iisc.ac.in/"  target="_blank">http://www.cense.iisc.ac.in/</a>
+								<a href="http://www.cense.iisc.ac.in/" target="_blank">http://www.cense.iisc.ac.in/</a>
 							</div>
 						</div>
-						<!--<div class="col-md-3">
-							<div class="widget">
-								<h3 class="widget-title">Press room</h3>
-								<ul class="arrow-list">
-									<li><a href="#">Accusantium doloremque</a></li> 
-									<li><a href="#">Laudantium totam aperiam</a></li>
-									<li><a href="#">Eaque ipsa quae illo inventore</a></li> 
-									<li><a href="#">Veritatis et quasi architecto</a></li>
-									<li><a href="#">Vitae dicta sunt explicabo</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="widget">
-								<h3 class="widget-title">Research summary</h3>
-								<ul class="arrow-list">
-									<li><a href="#">Accusantium doloremque</a></li> 
-									<li><a href="#">Laudantium totam aperiam</a></li>
-									<li><a href="#">Eaque ipsa quae illo inventore</a></li> 
-									<li><a href="#">Veritatis et quasi architecto</a></li>
-									<li><a href="#">Vitae dicta sunt explicabo</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="widget">
-								<h3 class="widget-title">Social media</h3>
-								<p>Deserunt mollitia animi id est laborum dolorum fuga harum quidem rerum facilis.</p>
-								<div class="social-links">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-pinterest"></i></a>
-								</div>
-							</div>
-						</div>-->
 					</div> <!-- .row -->
-
-					<!--<p class="colophon">copyright 2014 Company name. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by VandelayDesign.com" target="_blank">VandelayDesign.com</a>. All rights reserved</p>-->
 				</div> <!-- .container -->
 			</footer>
 		</div>
@@ -317,7 +216,5 @@
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/app.js"></script>
-		
-	</body>
-
+</body>
 </html>
